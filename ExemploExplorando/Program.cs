@@ -2,10 +2,12 @@
 
 
 using ExemploExplorando.Models;
+using System.Reflection.PortableExecutable;
 
 
 Pessoa pessoa1 = new Pessoa();
 pessoa1.Nome = "Renan ";
+pessoa1.sobrenome = "Marcilio";
 pessoa1.Idade = 30;
 
 
