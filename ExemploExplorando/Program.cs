@@ -1,7 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-
-using ExemploExplorando.Models;
+﻿using ExemploExplorando.Models;
 using System.Reflection.PortableExecutable;
 
 
@@ -11,13 +8,8 @@ using System.Reflection.PortableExecutable;
 //pessoa1.idade = 30;
 //pessoa1.apresentar();
 
-Pessoa p1 = new Pessoa();
-p1.Nome = "Renan";
-p1.sobrenome = "Marcilio";
-
-Pessoa p2 = new Pessoa();
-p2.Nome = "João";
-p2.sobrenome = "Silva";
+Pessoa p1 = new Pessoa("Renan", "Marcilio");
+Pessoa p2 = new Pessoa("João", "Silva");
 
 Curso cursoIngles = new Curso();
 cursoIngles.Nome = "Inglês Básico";

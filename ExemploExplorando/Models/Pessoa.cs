@@ -8,6 +8,14 @@ namespace ExemploExplorando.Models
 {
     internal class Pessoa
     {
+
+        public Pessoa() { }
+        public Pessoa(string nome, string sobrenome)
+        {
+            Nome = nome;
+            Sobrenome = sobrenome;
+        }
+
         private string _nome;
         private int _idade;
 
@@ -24,9 +32,9 @@ namespace ExemploExplorando.Models
             }
         }
 
-        public string sobrenome { get; set; }
+        public string Sobrenome { get; set; }
 
-        public string NomeCompleto => $"{Nome} {sobrenome}".ToUpper();
+        public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
 
         public int Idade
         {
