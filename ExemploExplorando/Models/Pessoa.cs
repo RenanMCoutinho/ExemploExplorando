@@ -16,7 +16,7 @@ namespace ExemploExplorando.Models
             get => _nome.ToUpper();
             set
             {
-                if (value == "")
+                if (value == " ")
                 {
                     throw new ArgumentException("O nome não pode ser vazio");
                 }

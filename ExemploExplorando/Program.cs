@@ -5,10 +5,24 @@ using ExemploExplorando.Models;
 using System.Reflection.PortableExecutable;
 
 
-Pessoa pessoa1 = new Pessoa();
-pessoa1.Nome = "Renan ";
-pessoa1.sobrenome = "Marcilio";
-pessoa1.Idade = 30;
+//pessoa pessoa1 = new pessoa();
+//pessoa1.nome = "renan ";
+//pessoa1.sobrenome = "marcilio";
+//pessoa1.idade = 30;
+//pessoa1.apresentar();
 
+Pessoa p1 = new Pessoa();
+p1.Nome = "Renan";
+p1.sobrenome = "Marcilio";
 
-pessoa1.Apresentar();
+Pessoa p2 = new Pessoa();
+p2.Nome = "João";
+p2.sobrenome = "Silva";
+
+Curso cursoIngles = new Curso();
+cursoIngles.Nome = "Inglês Básico";
+cursoIngles.Alunos = new List<Pessoa>();
+
+cursoIngles.AddAluno(p1);
+cursoIngles.AddAluno(p2);
+cursoIngles.ListarAlunos();
