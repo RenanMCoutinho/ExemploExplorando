@@ -1,5 +1,8 @@
 ﻿using ExemploExplorando.Models;
 using System.Reflection.PortableExecutable;
+using System.Globalization;
+
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
 
 //pessoa pessoa1 = new pessoa();
 //pessoa1.nome = "renan ";
@@ -7,13 +10,18 @@ using System.Reflection.PortableExecutable;
 //pessoa1.idade = 30;
 //pessoa1.apresentar();
 
-Pessoa p1 = new Pessoa(nome: "Renan", sobrenome: "Marcilio");
-Pessoa p2 = new Pessoa("João", "Silva");
+//Pessoa p1 = new Pessoa(nome: "Renan", sobrenome: "Marcilio");
+//Pessoa p2 = new Pessoa("João", "Silva");
 
-Curso cursoIngles = new Curso();
-cursoIngles.Nome = "Inglês Básico";
-cursoIngles.Alunos = new List<Pessoa>();
+//Curso cursoIngles = new Curso();
+//cursoIngles.Nome = "Inglês Básico";
+//cursoIngles.Alunos = new List<Pessoa>();
 
-cursoIngles.AddAluno(p1);
-cursoIngles.AddAluno(p2);
-cursoIngles.ListarAlunos();
+//cursoIngles.AddAluno(p1);
+//cursoIngles.AddAluno(p2);
+//cursoIngles.ListarAlunos();
+
+
+decimal valorMonetario = 82.40m;
+
+Console.WriteLine(valorMonetario.ToString("C", CultureInfo.CreateSpecificCulture("pt-BR")));
