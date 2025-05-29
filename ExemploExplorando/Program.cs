@@ -2,25 +2,44 @@
 using System.Reflection.PortableExecutable;
 using System.Globalization;
 
+Dictionary<string, string> estados = new Dictionary<string, string>();
 
-Stack<int> pilha = new Stack<int>();
+estados.Add("SP", "São Paulo");
+estados.Add("RJ", "Rio de Janeiro");
+estados.Add("MG", "Minas Gerais");
 
-pilha.Push(4);
-pilha.Push(6);
-pilha.Push(8);
-pilha.Push(10);
-
-foreach (var item in pilha)
+foreach (var estado in estados)
 {
-    Console.WriteLine(item);
+    Console.WriteLine($"Chave: {estado.Key}, Valor: {estado.Value}");
 }
-Console.WriteLine($"Removido! {pilha.Pop()}");
-
-pilha.Push(12);
-foreach (var item in pilha)
+estados.Remove("MG");
+estados["SP"] = "São Paulo - Alterado";
+Console.WriteLine("-------------- Após remover Minas Gerais -----------------");
+foreach (var estado in estados)
 {
-    Console.WriteLine(item);
+    Console.WriteLine($"Chave: {estado.Key}, Valor: {estado.Value}");
 }
+
+
+
+//Stack<int> pilha = new Stack<int>();
+
+//pilha.Push(4);
+//pilha.Push(6);
+//pilha.Push(8);
+//pilha.Push(10);
+
+//foreach (var item in pilha)
+//{
+//    Console.WriteLine(item);
+//}
+//Console.WriteLine($"Removido! {pilha.Pop()}");
+
+//pilha.Push(12);
+//foreach (var item in pilha)
+//{
+//    Console.WriteLine(item);
+//}
 
 
 //Queue<int> fila = new Queue<int>();
